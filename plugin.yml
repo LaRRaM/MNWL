@@ -1,0 +1,14 @@
+name: MNWitelist
+main: mnwl.plugin.Main
+version: 0.1.0
+api-version: 1.15
+commands:
+  wladd:
+    description: Add player to white list
+    usage: /wladd <player>
+  wlremove:
+    description: Remove player from white list
+    usage: /wlremove <player>
+  wlist:
+    description: Look at white list
+    usage: /wlist
