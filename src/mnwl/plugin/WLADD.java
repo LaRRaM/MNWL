@@ -17,12 +17,15 @@ public class WLADD implements CommandExecutor{
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		
 		File users = new File(plugin.getDataFolder() + File.separator + "users.yml");
 		FileConfiguration wl = YamlConfiguration.loadConfiguration(users);
+
+		
 		List<String> list = wl.getStringList("users");
 		
 		if (!sender.hasPermission("wladd")) {
-			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("message.permDenied"));
+			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.permDenied"));
 //			sender.sendMessage(ChatColor.RED + "Permission denied");
 			return true;
 		}
@@ -31,7 +34,7 @@ public class WLADD implements CommandExecutor{
 		}
 		String name = args[0];
 		if (list.contains(name)) {
-			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("message.plrExist"));
+			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.plrExist"));
 //			sender.sendMessage(ChatColor.RED + "Player already exist");
 			return true;
 		}
@@ -43,7 +46,7 @@ public class WLADD implements CommandExecutor{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("message.plrAdded").replace("{name}", name));
+		sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.plrAdded").replace("{name}", name));
 //		sender.sendMessage(ChatColor.GREEN + "Player " + name + " was added to white list");
 		plugin.reloadConfig();
 		
