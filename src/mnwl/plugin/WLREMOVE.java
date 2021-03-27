@@ -23,10 +23,9 @@ public class WLREMOVE implements CommandExecutor{
 
 
 		List<String> list = wl.getStringList("users");
-		// 		Permission denied		
+// 		Permission denied		
 		if (!sender.hasPermission("wladd")) {
 			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.permDenied"));
-//			sender.sendMessage(ChatColor.RED + "Permission denied");
 			return true;
 		}
 		if (args.length == 0) {
@@ -37,7 +36,6 @@ public class WLREMOVE implements CommandExecutor{
 //		Player not exist		
 		if (!list.contains(name)) {
 			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.plrNotExist"));
-//			sender.sendMessage(ChatColor.RED + "Player not exist");
 			return true;
 		}
 // 		Remove player form white list	
@@ -49,9 +47,7 @@ public class WLREMOVE implements CommandExecutor{
 			e.printStackTrace();
 		}
 		
-		sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.plrRemoved").replace("{name}", name));
-		
-//		sender.sendMessage(ChatColor.RED + "Player " +  name + " was removed from white list");
+		sender.sendMessage(ChatColor.GREEN + plugin.getConfig().getString("messages.plrRemoved").replace("{name}", name));
 		plugin.reloadConfig();
 		
 		return true;
