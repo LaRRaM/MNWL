@@ -1,4 +1,5 @@
 name: MNWitelist
+author: LaRRaM inc.
 main: mnwl.plugin.Main
 version: 0.1.0
 api-version: 1.15

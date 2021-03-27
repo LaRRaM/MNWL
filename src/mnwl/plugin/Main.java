@@ -12,7 +12,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-//some comment
+
 public class Main extends JavaPlugin implements Listener{
 	@Override
 	public void onEnable() {
@@ -22,6 +22,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("wlist").setExecutor(new WLIST(this));
 //White list create				
 		File users = new File(getDataFolder() + File.separator + "users.yml");
+		File config = new File(getDataFolder() + File.separator + "config.yml");
 		
 		if (!users.exists()) {
 			try {
@@ -29,6 +30,10 @@ public class Main extends JavaPlugin implements Listener{
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+		}
+		if (!config.exists()){
+			getConfig().options().copyDefaults(true);
+			saveDefaultConfig();
 		}
 
 		Bukkit.getPluginManager().registerEvents(this, this);
