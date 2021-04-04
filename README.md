@@ -1,7 +1,7 @@
 #MNWL 1.16 - Moris & Newer White List plugin
 
 
-Configuration
+All configuration contained in *config.yml* file
 
 ```yml
 messages:
