@@ -3,7 +3,7 @@
 
 All configuration contained in *config.yml* file
 
-```yaml
+```yml
 messages:
    kickMessage: 'You are not in white list!'
    permDenied: 'Permission denied'
