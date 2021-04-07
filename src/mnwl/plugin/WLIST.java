@@ -17,7 +17,7 @@ public class WLIST implements CommandExecutor{
 		File users = new File(plugin.getDataFolder() + File.separator + "users.yml");
 		FileConfiguration wl = YamlConfiguration.loadConfiguration(users);
 		List<String> list = wl.getStringList("users");
-		
+
 		if (!sender.hasPermission("wladd")) {
 			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.permDenied"));
 //			sender.sendMessage(ChatColor.RED + "Permission denied");
