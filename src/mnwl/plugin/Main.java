@@ -20,6 +20,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("wladd").setExecutor(new WLADD(this));
 		getCommand("wlremove").setExecutor(new WLREMOVE(this));
 		getCommand("wlist").setExecutor(new WLIST(this));
+		getCommand("wl").setExecutor(new WL(this));
 //White list create				
 		File users = new File(getDataFolder() + File.separator + "users.yml");
 		File config = new File(getDataFolder() + File.separator + "config.yml");

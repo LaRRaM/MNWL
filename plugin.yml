@@ -13,3 +13,6 @@ commands:
   wlist:
     description: Look at white list
     usage: /wlist
+  wl: 
+    description: General command
+    usage: /wl help

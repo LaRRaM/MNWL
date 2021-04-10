@@ -6,3 +6,4 @@ messages:
    plrNotExist: 'Player not exist'
    plrAdded: 'Player {name} was added to white list'
    plrRemoved: 'Player {name} was removed from white list'
+   help: ''
