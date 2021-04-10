@@ -7,6 +7,7 @@ All plugin configurations are contained in the *config.yml* file.
 The settings responsible for chat messages are located in the *messages* block.
 
 ```yaml
+#default config
 messages:
    kickMessage: 'You are not in white list!'
    permDenied: 'Permission denied'
