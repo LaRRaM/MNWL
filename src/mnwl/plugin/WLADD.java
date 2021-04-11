@@ -23,7 +23,7 @@ public class WLADD implements CommandExecutor{
 
 		
 		List<String> list = wl.getStringList("users");
-		
+// Errors check		
 		if (!sender.hasPermission("wladd")) {
 			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.permDenied"));
 			return true;
@@ -36,7 +36,7 @@ public class WLADD implements CommandExecutor{
 			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.plrExist"));
 			return true;
 		}
-		
+//Add player to list
 		list.add(name);
 		wl.set("users", list);
 		try {

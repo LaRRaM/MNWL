@@ -21,7 +21,6 @@ public class WLREMOVE implements CommandExecutor{
 		File users = new File(plugin.getDataFolder() + File.separator + "users.yml");
 		FileConfiguration wl = YamlConfiguration.loadConfiguration(users);
 
-
 		List<String> list = wl.getStringList("users");
 // 		Permission denied		
 		if (!sender.hasPermission("wladd")) {

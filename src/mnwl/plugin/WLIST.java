@@ -20,7 +20,6 @@ public class WLIST implements CommandExecutor{
 //
 		if (!sender.hasPermission("wladd")) {
 			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.permDenied"));
-//			sender.sendMessage(ChatColor.RED + "Permission denied");
 			return true;
 		}
 		
