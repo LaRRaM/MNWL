@@ -24,7 +24,7 @@ public class WLADD implements CommandExecutor{
 		
 		List<String> list = wl.getStringList("users");
 // Errors check		
-		if (!sender.hasPermission("wladd")) {
+		if (!sender.hasPermission("wl.add")) {
 			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.permDenied"));
 			return true;
 		}

@@ -23,7 +23,7 @@ public class WLREMOVE implements CommandExecutor{
 
 		List<String> list = wl.getStringList("users");
 // 		Permission denied		
-		if (!sender.hasPermission("wladd")) {
+		if (!sender.hasPermission("wl.remove")) {
 			sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("messages.permDenied"));
 			return true;
 		}
