@@ -13,7 +13,7 @@ commands:
   wlist:
     description: Look at white list
     usage: /wlist
-
+#
 permissions:
   wl.*:
     description: Gives permissions to all wl commands
