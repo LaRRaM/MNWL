@@ -41,3 +41,13 @@ To remove a player from the whitelis, use the command *wlremove*:
 ```
 /wlremove [nickname]
 ```
+
+## Permissions
+
+All permissions are prefixed with *wl.*
+
+| Value | Permission |
+| -------: | :------- |
+| wl.**add** | Permission to add a player to the list |
+| wl.**remove** | Permission to remove a player from the list |
+| wl.**list** | List view permission  |
