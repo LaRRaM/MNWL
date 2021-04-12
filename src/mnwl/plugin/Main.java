@@ -23,7 +23,7 @@ public class Main extends JavaPlugin implements Listener{
 //White list create				
 		File users = new File(getDataFolder() + File.separator + "users.yml");
 		File config = new File(getDataFolder() + File.separator + "config.yml");
-		
+//Files is exist
 		if (!users.exists()) {
 			try {
 				users.createNewFile();
