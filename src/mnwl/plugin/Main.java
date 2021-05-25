@@ -1,7 +1,7 @@
 package mnwl.plugin;
 
 import java.io.File;
-import java.io.IOException;
+//import java.io.IOException;
 import java.util.List;
 
 import org.bukkit.Bukkit;
@@ -24,14 +24,7 @@ public class Main extends JavaPlugin implements Listener{
 		File users = new File(getDataFolder() + File.separator + "users.yml");
 		File config = new File(getDataFolder() + File.separator + "config.yml");
 //Files is exist
-		if (!users.exists()) {
-			try {
-				users.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		if (!config.exists()){
+		if (!config.exists() || !users.exists()){
 			getConfig().options().copyDefaults(true);
 			saveDefaultConfig();
 		}
