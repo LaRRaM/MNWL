@@ -17,7 +17,7 @@ messages:
    plrRemoved: 'Player {name} was removed from white list'
 ```
 
-| value | message |
+| Value | Message |
 | -------: | :------- |
 | kickMessage | Message displayed when a player is removed |
 | permDenied | Permission denied |
