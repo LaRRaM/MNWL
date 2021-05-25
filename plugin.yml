@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: MNWitelist
 author: LaRRaM inc.
 main: mnwl.plugin.Main
@@ -31,37 +30,3 @@ permissions:
   wl.list:
     description: Gives permission to view whitelist
     default: op
-=======
-name: MNWitelist
-author: LaRRaM inc.
-main: mnwl.plugin.Main
-version: 1.0
-api-version: 1.15
-commands:
-  wladd:
-    description: Add player to white list
-    usage: /wladd <player>
-  wlremove:
-    description: Remove player from white list
-    usage: /wlremove <player>
-  wlist:
-    description: Look at white list
-    usage: /wlist
-#
-permissions:
-  wl.*:
-    description: Gives permissions to all wl commands
-    children:
-      wl.add: true
-      wl.remove: true
-      wl.list: true
-  wl.add:
-    description: Gives permission to add players to the whitelist
-    default: op
-  wl.remove:
-    description: Gives permission to remove players from the whitelist
-    default: op
-  wl.list:
-    description: Gives permission to view whitelist
-    default: op
->>>>>>> 12544394458a2d3c83d9f0a444315f9d261c6f7b
